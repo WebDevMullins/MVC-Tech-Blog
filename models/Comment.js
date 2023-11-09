@@ -19,9 +19,9 @@ Comment.init(
 			}
 		},
 		date_created: {
-			type: DataTypes.DATE,
+			type: DataTypes.DATEONLY,
 			allowNull: false,
-			defautValue: DataTypes.NOW
+			defaultValue: DataTypes.NOW
 		},
 		post_id: {
 			type: DataTypes.INTEGER,
