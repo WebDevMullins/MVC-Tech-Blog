@@ -17,7 +17,8 @@ router.get('/', async (req, res) => {
 
 		// Pass data into template
 		res.render('home', {
-			posts
+			posts,
+			logged_in: req.session.logged_in
 		})
 	} catch (err) {
 		res.status(500).json(err)
@@ -25,11 +26,19 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/login', (req, res) => {
+	if (req.session.logged_in) {
+		res.redirect('/success')
+		return
+	}
 	res.render('login')
 })
 
 router.get('/signup', (req, res) => {
 	res.render('signup')
+})
+
+router.get('/success', (req, res) => {
+	res.render('success')
 })
 
 module.exports = router
