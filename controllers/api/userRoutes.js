@@ -5,7 +5,7 @@ router.post('/', async (req, res) => {
 	try {
 		const userData = await User.create(req.body)
 
-		req.sesson.save(() => {
+		req.session.save(() => {
 			req.session.user_id = userData.id
 			req.session.logged_in = true
 		})
@@ -36,7 +36,7 @@ router.post('/login', async (req, res) => {
 			return
 		}
 
-		req.sesson.save(() => {
+		req.session.save(() => {
 			req.session.user_id = userData.id
 			req.session.logged_in = true
 		})
