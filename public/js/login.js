@@ -14,7 +14,7 @@ const loginFormHandler = async (e) => {
 		if (response.ok) {
 			document.location.replace('/success')
 		} else {
-			alert(response.statusText)
+			alert('Invalid login credentials, please try again.')
 		}
 	}
 }
