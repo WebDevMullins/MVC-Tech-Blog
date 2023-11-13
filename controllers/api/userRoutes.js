@@ -58,16 +58,4 @@ router.post('/logout', (req, res) => {
 	}
 })
 
-router.get('/', (req, res) => {
-	const logged_in = req.session.logged_in
-
-	let user = null
-	if (logged_in) {
-		user = {
-			name: req.session.user.name
-		}
-	}
-	res.render('/', { logged_in, user})
-})
-
 module.exports = router
