@@ -2,11 +2,19 @@
 	<div class='py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6'>
 		<div class='mx-auto max-w-screen-sm text-center lg:mb-16 mb-8'>
 			<h2 class='mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white'>Your Posts</h2>
-			<p class='font-light text-gray-500 sm:text-xl dark:text-gray-400'>Click on posts below to read more and comment!</p>
+			<p class='font-light text-gray-500 sm:text-xl dark:text-gray-400'>Add new posts or edit current ones.</p>
+		</div>
+		<div class='mb-4'>
+			<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+				<svg class="w-3.5 h-3.5 me-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+    		<path d="M9.546.5a9.5 9.5 0 1 0 9.5 9.5 9.51 9.51 0 0 0-9.5-9.5ZM13.788 11h-3.242v3.242a1 1 0 1 1-2 0V11H5.304a1 1 0 0 1 0-2h3.242V5.758a1 1 0 0 1 2 0V9h3.242a1 1 0 1 1 0 2Z"/>
+  			</svg>
+				New Post
+			</button>
 		</div>
 		<div class='grid gap-8 lg:grid-cols-2'>
 			{{#each posts as |post| }}
-				{{> post-card post}}
+				{{> dashboard-post-card post}}
 			{{/each}}
 		</div>		
 	</div>
