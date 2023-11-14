@@ -1,0 +1,17 @@
+<section class='bg-white dark:bg-gray-900'>
+	<div class='py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6'>
+		<div class='mx-auto max-w-screen-md text-center lg:mb-16 mb-8'>
+			<h2 class='mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white'>Tech Blog</h2>
+			{{#unless logged_in}}
+			<p class='font-light text-gray-500 sm:text-xl dark:text-gray-400'>Log in to post comments!</p>
+			{{/unless}}
+		</div>
+		<div class='items-center max-w-screen-md mx-auto'>
+			{{> home-post-card post}}
+		</div>
+		{{#if logged_in}}
+			{{> add-comment}}
+		{{/if}}
+			{{> comments post.comments}}
+	</div>
+</section>
