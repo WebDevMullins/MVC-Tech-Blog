@@ -6,11 +6,12 @@
 		<link rel='stylesheet' href='/css/styles.css' />
 		<link href='https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.css' rel='stylesheet' />
 	</head>
-	<body class='bg-gray-900 text-white flex flex-col mx-auto'>
+	<body class='h-screen bg-gray-900 text-white flex flex-col justify-between mx-auto'>
 		{{> navbar}}
-		<main>
+		<main class='mb-auto'>
 			{{{body}}}
 		</main>
+		{{> footer}}
 		{{#if logged_in}}
 			<script src='/js/logout.js'></script>
 		{{/if}}
