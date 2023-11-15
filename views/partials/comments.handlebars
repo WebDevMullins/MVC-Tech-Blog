@@ -1,17 +1,28 @@
+<!-- Comment Section -->
 <section class='bg-white dark:bg-gray-900 py-6 antialiased'>
+	<!-- Container for comments -->
 	<div class='max-w-2xl mx-auto px-4'>
+		<!-- Iterate over each comment in the data -->
 		{{#each this}}
+			<!-- Comment Article -->
 			<article class='p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900'>
+				<!-- Comment Footer -->
 				<footer class='flex justify-between items-center mb-2'>
 					<div class='flex items-center'>
-						<p
-							class='inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold'
-						>{{user.name}}</p>
+						<!-- User's Name -->
+						<p class='inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold'>
+							{{user.name}}
+						</p>
+						<!-- Comment Date -->
 						<p class='text-sm text-gray-600 dark:text-gray-400'>
-							{{date_created}}</p>
+							{{format_date date_created}}
+						</p>
 					</div>
 				</footer>
-				<p class='text-gray-500 dark:text-gray-400'>{{content}}</p>
+				<!-- Comment Content -->
+				<p class='text-gray-500 dark:text-gray-400'>
+					{{content}}
+				</p>
 			</article>
 		{{/each}}
 	</div>

@@ -1,13 +1,18 @@
+<!-- Home Section -->
 <section class='bg-white dark:bg-gray-900'>
 	<div class='py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6'>
+
+		<!-- Section Header -->
 		<div class='mx-auto max-w-screen-sm text-center lg:mb-16 mb-8'>
 			<h2 class='mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white'>Tech Blog</h2>
 			<p class='font-light text-gray-500 sm:text-xl dark:text-gray-400'>Click on posts below to read more and comment!</p>
 		</div>
+
+		<!-- Post Grid -->
 		<div class='grid gap-8 lg:grid-cols-2'>
 			{{#each posts as |post| }}
-				{{> home-post-card post}}
+				{{> home-post-card post}} <!-- Include the home-post-card partial for each post -->
 			{{/each}}
-		</div>		
+		</div>
 	</div>
 </section>

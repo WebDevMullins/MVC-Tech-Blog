@@ -1,15 +1,33 @@
+<!-- New Post Section -->
 <section class='bg-white dark:bg-gray-900'>
 	<div class='py-8 px-4 mx-auto max-w-2xl lg:py-16'>
+
+		<!-- New Post Form Container -->
 		<div class='py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6'>
 			<div class='mx-auto max-w-screen-sm text-center lg:mb-16 mb-8'>
-				<h2 class='mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white'>Create New
-					Post</h2>
-				<p class='font-light text-gray-500 sm:text-xl dark:text-gray-400'>Add a new post.</p>
+
+				<!-- Section Title -->
+				<h2 class='mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white'>
+					Create New Post
+				</h2>
+
+				<!-- Section Description -->
+				<p class='font-light text-gray-500 sm:text-xl dark:text-gray-400'>
+					Add a new post.
+				</p>
 			</div>
+
+			<!-- New Post Form -->
 			<form class='new-post-form'>
+
+				<!-- Grid Layout for Form Fields -->
 				<div class='grid gap-4 sm:grid-cols-2 sm:gap-6'>
+
+					<!-- Post Title Input -->
 					<div class='sm:col-span-2'>
-						<label for='title' class='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>Post Title</label>
+						<label for='title' class='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>
+							Post Title
+						</label>
 						<input
 							type='text'
 							name='title'
@@ -20,8 +38,11 @@
 						/>
 					</div>
 
+					<!-- Post Content Textarea -->
 					<div class='sm:col-span-2'>
-						<label for='content' class='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>Content</label>
+						<label for='content' class='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>
+							Content
+						</label>
 						<textarea
 							id='content'
 							rows='8'
@@ -30,6 +51,8 @@
 						></textarea>
 					</div>
 				</div>
+
+				<!-- Add Post Button -->
 				<button
 					type='submit'
 					class='inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:bg-primary-700 dark:focus:ring-primary-900 hover:bg-primary-800'
@@ -41,4 +64,5 @@
 	</div>
 </section>
 
+<!-- Include JavaScript for New Post Form Handling -->
 <script src='/js/new-post.js'></script>
