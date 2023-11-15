@@ -1,5 +1,19 @@
 const router = require('express').Router()
 const { Comment, Post, User } = require('../../models')
+const withAuth = require('../../utils/auth')
+
+router.post('/', withAuth, async (req, res) => {
+	try {
+		const postData = await Post.create({
+			title: req.body.title,
+			content: req.body.content,
+			user_id: req.session.user_id
+		})
+		res.status(200).json(postData)
+	} catch (err) {
+		res.status(500).json(err)
+	}
+})
 
 router.get('/', async (req, res) => {
 	try {
@@ -27,7 +41,7 @@ router.get('/', async (req, res) => {
 	}
 })
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
 	try {
 		const postData = await Post.findOne({
 			where: {
